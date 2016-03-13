@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>DZ6 Zazor Теплова Виктория</title>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <header>
+         <div class="phone">
+            <img src="img/phone.png" alt="icon-phone">
+            <p> (044)123-45-67   (044)567-89-10</p>
+         </div>
+         <div class="login-section">
+            <form action="#" method="post">
+               <img src="img/man.png" alt="icon-man">
+               <input name="login" placeholder="логин" type="text">
+               <input name="password" placeholder="пароль" type="password">
+               <input type="submit" value="вход" name="submit" class="submit-login">
+               <a href="#">регистрация</a>
+               <a href="#">забыли пароль?</a>
+            </form>
+         </div>
+         <div class="icon-nav">
+            <a href="#"><img src="img/home.png" alt="icon"></a>
+            <a href="#"><img src="img/site_map.png" alt="icon"></a>
+            <a href="#"><img src="img/message.png" alt="icon"></a>
+         </div>
+         <img src="img/zazor-back.png" alt="background-zazor" class="mp">
+      </header>
+      <nav class="clearfix">
+         <ul class="main-menu">
+            <li>
+               <a href="#">О КОМПАНИ</a>
+            </li>
+            <li>
+               <a href="#">ОПЛАТА</a>
+            </li>
+            <li>
+               <a href="#">ДОСТАВКА</a>
+            </li>
+            <li>
+               <a href="#">СТАТЬИ</a>
+            </li>
+            <li>
+               <a href="#">КОНТАКТЫ</a>
+            </li>
+          </ul>
+          <ul  class="basket">
+            <li>
+               <p><a href="#"><img src="img/basket.png" alt="icon-basket"></a>товаров: <span> 0</span></p>
+            </li>
+            <li><p>на сумму: <span> 0,00 грн.</span></p>
+            </li>
+         </ul>
+      </nav>
+      <section class="search clearfix">
+        <form class="car_search_form" action="index.html" method="post">
+         <section class="car">
+            <div class="search-wrapper">
+               <div class="car_search_header">
+                  <p>Диски:</p>
+                  <p><span>Поиск по автомобилю</span></p>
+                  <p>Шины:</p>
+               </div>
+                  <!--start of first form-->
+                  <div class="car_disk_search">
+                     <div class="car_brand">
+                        <p> Марка <span>авто:</span></p>
+                        <select size="1" name="name[]">
+                           <option value="Audi">Audi</option>
+                           <option value="Sckoda">Sckoda</option>
+                           <option value="Lexus">Lexus</option>
+                        </select>
+                     </div>
+                     <div class="car_model">
+                        <p> Модель <br> <span>автомобиля:</span></p>
+                        <select size="1" name="name[]">
+                           <option value="A6">A6</option>
+                           <option value="Felicia">Felicia</option>
+                           <option value="LX">LX</option>
+                        </select>
+                     </div>
+                     <div class="car_year">
+                        <p>Год выпуска<br><span>авто:</span></p>
+                        <select size="1" name="name[]">
+                           <option value="2001">2001</option>
+                           <option value="2002">2002</option>
+                           <option value="2003">2003</option>
+                        </select>
+                     </div>
+                     <div class="car_complectation">
+                        <p> Комплектация:</p>
+                        <select size="1" name="name[]">
+                           <option value="11">11</option>
+                           <option value="12">12</option>
+                           <option value="13">13</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="car_tires_search">
+                     <div class="car_brand">
+                        <p> Марка <span>авто:</span></p>
+                        <select size="1"  name="name[]">
+                           <option value="Audi">Audi</option>
+                           <option value="Sckoda">Sckoda</option>
+                           <option value="Lexus">Lexus</option>
+                        </select>
+                     </div>
+                     <div class="car_model">
+                        <p> Модель <br> <span>автомобиля:</span></p>
+                        <select size="1"  name="name[]">
+                           <option value="A6">A6</option>
+                           <option value="Felicia">Felicia</option>
+                           <option value="LX">LX</option>
+                        </select>
+                     </div>
+                     <div class="car_year">
+                        <p>Год выпуска <br><span>авто:</span></p>
+                        <select size="1" name="name[]">
+                           <option value="2001">2001</option>
+                           <option value="2002">2002</option>
+                           <option value="2003">2003</option>
+                        </select>
+                     </div>
+                     <div class="car_complectation">
+                        <p> Комплектация:</p>
+                        <select size="1"  name="name[]">
+                           <option value="11">11</option>
+                           <option value="12">12</option>
+                           <option value="13">13</option>
+                        </select>
+                     </div>
+
+                  </div>
+              </div>
+            <input id="car-submit" value=" Поиск..." type="submit" class="searching-button">
+         </section>
+       </form>
+         <!--start of second form-->
+         <form class="tires_search_form" action="#" method="post">
+         <section class="tires">
+            <div class="search-wrapper">
+               <div class="tires_search_header">
+                  <p> ПОИСК ШИН  </p>
+               </div>
+                  <div class="tires_size">
+                     <p>Размер: </p>
+                     <select size="1" name="name[]">
+                       <option value="100">100</option>
+                       <option value="200">200</option>
+                       <option value="300">300</option>
+                     </select>
+                     <p>   /  </p>
+                     <select size="1" name="name[]">
+                       <option value="100">100</option>
+                       <option value="200">200</option>
+                       <option value="300">300</option>
+                     </select>
+                  </div>
+                  <div class="tires_R">
+                     <p> R </p>
+                     <select size="1" name="name[]">
+                       <option value="100">10</option>
+                       <option value="200">20</option>
+                       <option value="300">30</option>
+                     </select>
+                  </div>
+                  <div class="tires_season">
+                     <div class="tires_season_header">
+                        <p> Сезон:     </p>
+                     </div>
+                     <div class="tires_season_checkbox">
+                        <div class="tires_season_checkbox_1"><input id="summer" type="checkbox"> <label for="summer">лето </label></div>
+                        <div class="tires_season_checkbox_1"><input id="winter" type="checkbox"> <label for="winter">зима</label></div>
+                        <div class="tires_season_checkbox_1"><input id="allseasons" type="checkbox"> <label for="allseasons">всесез</label></div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <input id="tires-submit" value=" Поиск... " type="submit" class="searching-button">
+         </section>
+       </form>
+         <!--end of first form-->
+         <form class="disks_search_form1" action="#" method="post">
+         <section class="disk">
+            <div class="disks_search">
+                  <div class="disks_search_header">
+                     <p>ПОИСК ДИСКОВ </p>
+                  </div>
+                  <div class="disks_diametr">
+                     <p> Диаметр <span>диска </span>: </p>
+                     <select size="1"  name="name[]">
+                       <option value="100">100</option>
+                       <option  value="200">200</option>
+                       <option value="300">300</option>
+                     </select>
+                  </div>
+                  <div class="disks_amount">
+                     <p> Количество <span><br>крепёжных <br>отверстий</span>:</p>
+                     <select size="1"  name="name[]">
+                       <option value="100">100</option>
+                       <option  value="200">200</option>
+                       <option value="300">300</option>
+                     </select>
+                  </div>
+                  <div class="disks_diametr">
+                     <p> Диаметр  <span><br>расположения <br>крепёжных <br>отверстий </span>:</p>
+                     <select size="1"  name="name[]">
+                       <option value="100">100</option>
+                       <option  value="200">200</option>
+                       <option value="300">300</option>
+                     </select>
+                  </div>
+                  <div class="disks_search_right_side">
+                     <div class="disks_DCO">
+                        <p> ДЦО <br><span>(диаметр <br> центрального <br>отверстия) </span>:</p>
+                        <select size="1"  name="name[]">
+                          <option value="100">100</option>
+                          <option value="200">200</option>
+                          <option value="300">300</option>
+                        </select>
+                        <div class="disks_ET">
+                           <p> ET <span>(вылет диска)</span>:</p>
+                           <select size="1"  name="name[]">
+                             <option value="100">100</option>
+                             <option  value="200">200</option>
+                             <option value="300">300</option>
+                           </select>
+                        </div>
+
+                     </div>
+                  </div>
+            </div>
+            <input id="disks-submit" value=" Поиск... " type="submit" class="searching-button">
+         </section>
+       </form>
+         <!--end of third form-->
+      </section>
+      <main class="clearfix">
+         <aside class="left-side">
+            <h2><img src="img/catalog-icon.png" alt="icon">КАТАЛОГ ПРОДУКЦИИ:</h2>
+            <h3><img src="img/tire-icon.png" alt="icon>">ШИНЫ</h3>
+            <ul>
+               <li><a href="#">Наименование 1</a></li>
+               <li><a href="#">Наименование 2</a></li>
+               <li><a href="#">Наименование 3</a></li>
+               <li><a href="#">Наименование 4</a></li>
+            </ul>
+            <h3><img src="img/tire-icon.png" alt="icon>">ДИСКИ</h3>
+            <ul>
+               <li><a href="#">Наименование 1</a></li>
+               <li><a href="#">Наименование 2</a></li>
+               <li><a href="#">Наименование 3</a></li>
+               <li><a href="#">Наименование 4</a></li>
+            </ul>
+            <h3><img src="img/tire-icon.png" alt="icon>">БОЛТЫ</h3>
+            <ul>
+               <li><a href="#">Наименование 1</a></li>
+               <li><a href="#">Наименование 2</a></li>
+               <li><a href="#">Наименование 3</a></li>
+               <li><a href="#">Наименование 4</a></li>
+            </ul>
+         </aside>
+         <section class="info">
+            <div class="content">
+               <div class="1_row">
+                  <div class="row">
+                    <a href="#">
+                    <figcaption><span class="color">Goodyear</span><br>Ultra Grip Extreme</figcaption>
+                    <figura><img src="img/weel_1.jpg" alt="weel"></figura>
+                  </a>
+                    <p><span>90.00 грн.</span></p>
+                </div>
+                  <div class="row">
+                    <a href="#">
+                    <figcaption><span class="color">Nokian</span><br>Hakkapeliitta R</figcaption>
+                    <figura><img src="img/weel_2.jpg" alt="weel"></figura>
+                  </a>
+                    <p><span>115.00 грн.</span></p>
+                  </div>
+                  <div class="row">
+                    <a href="#">
+                    <figcaption><span class="color">Hankook</span><br>K 708 155/65 R14</figcaption>
+                    <figura><img src="img/weel_3.jpg" alt="weel"></figura>
+                  </a>
+                    <p><span>393.00 грн.</span></p>
+                  </div>
+               </div>
+               <div class="2_row">
+                 <div class="row">
+                   <a href="#">
+                   <figcaption><span class="color">Goodyear</span><br>Ultra Grip Extreme</figcaption>
+                   <figura><img src="img/weel_1.jpg" alt="weel"></figura>
+                 </a>
+                   <p><span>90.00 грн.</span></p>
+               </div>
+                 <div class="row">
+                   <a href="#">
+                   <figcaption><span class="color">Nokian</span><br>Hakkapeliitta R</figcaption>
+                   <figura><img src="img/weel_2.jpg" alt="weel"></figura>
+                 </a>
+                   <p><span>115.00 грн.</span></p>
+                 </div>
+                 <div class="row">
+                   <a href="#">
+                   <figcaption><span class="color">Hankook</span><br>K 708 155/65 R14</figcaption>
+                   <figura><img src="img/weel_3.jpg" alt="weel"></figura>
+                 </a>
+                   <p><span>393.00 грн.</span></p>
+                 </div>
+              </div>
+               <div class="3_row">
+                 <div class="row">
+                   <a href="#">
+                   <figcaption><span class="color">Goodyear</span><br>Ultra Grip Extreme</figcaption>
+                   <figura><img src="img/weel_1.jpg" alt="weel"></figura>
+                 </a>
+                   <p><span>90.00 грн.</span></p>
+               </div>
+                 <div class="row">
+                   <a href="#">
+                   <figcaption><span class="color">Nokian</span><br>Hakkapeliitta R</figcaption>
+                   <figura><img src="img/weel_2.jpg" alt="weel"></figura>
+                 </a>
+                   <p><span>115.00 грн.</span></p>
+                 </div>
+                 <div class="row">
+                   <a href="#">
+                   <figcaption><span class="color">Hankook</span><br>K 708 155/65 R14</figcaption>
+                   <figura><img src="img/weel_3.jpg" alt="weel"></figura>
+                 </a>
+                   <p><span>393.00 грн.</span></p>
+                 </div>
+            </div>
+          </div>
+         </section>
+         <aside class="right-side">
+            <h2><img src="img/catalog-icon.png" alt="icon">БРЕНДЫ</h2>
+            <h3><img src="img/tire-icon.png" alt="icon">ШИНЫ</h3>
+            <form action="#" method="post" class="form">
+               <div>
+                  <input type="checkbox" name="brand1" id="brand1">
+                  <label for="brand1">Бренд 1</label>
+               </div>
+               <div>
+                  <input type="checkbox" name="brand2" id="brand2">
+                  <label for="brand2">Бренд 2</label>
+               </div>
+               <div>
+                  <input type="checkbox" name="brand3" id="brand3">
+                  <label for="brand3">Бренд 3</label>
+               </div>
+                <h3><img src="img/tire-icon.png" alt="icon">ДИСКИ</h3>
+               <div>
+                  <input type="checkbox" name="brand1" id="brand5">
+                  <label for="brand5">Бренд 1</label>
+               </div>
+               <div>
+                  <input type="checkbox" name="brand2" id="brand6">
+                  <label for="brand6">Бренд 2</label>
+               </div>
+               <div>
+                  <input type="checkbox" name="brand3" id="brand7">
+                  <label for="brand7">Бренд 3</label>
+               </div>
+               <div>
+                 <input class="submit" value="ВЫБРАТЬ" type="submit">
+               </div>
+
+            </form>
+         </aside>
+      </main>
+      <img src="img/brand-group.png" alt="brand-group" class="brand">
+      <footer>
+         <ul class="footer">
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Контакты</a></li>
+         </ul>
+         <p>Создание сайта ©Global Vision</p>
+      </footer>
+   </body>
+</html>
