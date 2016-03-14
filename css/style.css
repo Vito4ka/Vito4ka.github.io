@@ -1,6 +1,12 @@
+/* только для Internet Explorer */
 @font-face {
     font-family: LeagueGothic;
-    src: url(../fonts/LeagueGothic-Regular.otf);
+    src: url('../fonts/leaguegothic-regular-webfont.eot');
+}
+/* далее для всех остальных браузеров */
+@font-face {
+    font-family: LeagueGothic;
+    src: url('../fonts/LeagueGothic-Regular.otf');
 }
 @font-face {
     font-family: 'OpenSans';
@@ -414,6 +420,7 @@ header {
   width:60%;
   height:60%;
   margin-top: 3px;
+  margin-left: 3px;
   border-radius:50%;
   background:#e7e7e7;
   box-sizing: border-box;
