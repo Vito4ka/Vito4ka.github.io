@@ -1,46 +1,43 @@
-var time = {};
-time.flag = 0;    //timer is stopped
-
-function startTimer() {
-    time.start = callTime();// Remember when we started
-    time.id = setInterval(function () {
-  	 if (time.flag==1) return; //Is working. No other pcs
-     time.last = callTime()-time.start;
-     displayTime();
-   }, 19);
-}
-function callTime(){
-  return (new Date()).getTime();
-}
-function displayTime(){
-  var d = new Date;
-  d.setTime(time.last);
-  var h=d.getHours()-2; //time zone
-  var m=d.getMinutes();
-  var s=d.getSeconds();
-  var ms=d.getMilliseconds();
-  time.display = addZero(h,2)+":"+addZero(m,2)+":"+addZero(s,2)+"."+addZero(ms,3);
- document.getElementById("my_timer").innerHTML = time.display;
-}
-
-function addZero(x,n) {
-    while (x.toString().length < n) {
-        x = "0" + x;
+(function($, undefined){
+    var n;
+    $(".tabs").on("click", "li:not(.active)", function() {
+        n = $(this).parents(".tabs_block"), $(this).tabs(n)
+    }),
+    $.fn.tabs = function(n) {
+        $(this).addClass("active").siblings().removeClass("active"), n.find(".box").eq($(this).index()).show(1, function() {
+            $(this).addClass("open_tab")
+        }).siblings(".box").hide(1, function() {
+            $(this).removeClass("open_tab")
+        })
     }
-    return x;
-};
-function stopTimer(){
-  clearInterval(time.id);
-  time.flag = 0;
-};
-function resetTimer(){
-  stopTimer();
-  time.last = 0;
-    clearInterval(time.id);
-    displayTime();
-};
-function splitTimer(){
-var elementDiv = document.createElement("DIV");
-elementDiv.innerHTML = time.display;
-document.body.appendChild(elementDiv);
-};
+//-----------Second part--------------------------------
+  $('input').each(function() {
+    var el = $(this);
+    var title = el.attr('title');
+    if (title && title != '') {
+      el.attr('title', '').after('<div class="info">' + title + '</div>');
+      var el2=$(el.next());
+      var width = el2.width();
+      var height = el2.height();
+      el.hover(
+        function() {
+          var el2=$(el.next());
+            el2
+            .clearQueue()
+            .delay(200)
+            .animate({width: width + 20, height: height + 20}, 200).show(200)
+            .animate({width: width, height: height}, 200);
+        },
+        function() {
+          var el2=$(el.next());
+            el2
+            .animate({width: width + 20, height: height + 20}, 150)
+            .animate({width: 'hide', height: 'hide'}, 150);
+        }
+      ).mouseleave(function() {
+        if (el2.is(':hidden')) el2.clearQueue();
+      });
+    }
+  })
+
+})(jQuery)
