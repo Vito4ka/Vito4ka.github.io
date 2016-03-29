@@ -2,51 +2,129 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>tabs</title>
+    <title>js_09-10 Теплова Виктория</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/jquery.selectbox.css">
+    <link rel="stylesheet" href="css/checkbox.css">
+    <link rel="stylesheet" href="css/jcarousel.css">
+    <link rel="stylesheet" href="css/nicecheck.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel.js"></script>
+    <script src="js/jquery.selectbox-0.6.1.js"></script>
+    <script src="js/nicecheck.js"></script>
+    <script src="js/jquery.color.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/script.js"></script>
 
   </head>
   <body>
-    <section class="content">
-         <h1 style="text-align:center;">dz_07-8 Теплова Виктория</h1>
-         <div class="tabs_block">
-            <ul class="tabs">
-                <li class="active">Вкладка1</li>
-                <li>Вкладка2</li>
-                <li>Вкладка3</li>
+    <div class="wrapper">
+      <h3>Анимированное выпадающее меню</h3>
+      <nav>
+        <ul class="content clearfix">
+          <li><a href="#">Nav 1</a></li>
+          <li><a href="#">Nav 2</a></li>
+          <li class="dropdown">
+            <a href="#">Nav 3</a>
+            <ul style="display: none;" class="sub-menu">
+              <li><a href="#">Nav 3.1</a></li>
+              <li><a href="#">Nav 3.2</a></li>
+              <li><a href="#">Nav 3.3</a></li>
+              <li class="dropdown">
+                <a href="#">Nav 3.4</a>
+                <ul style="display: none;" class="sub-menu">
+                  <li><a href="#">Nav 3.4.1</a></li>
+                  <li class="dropdown">
+                    <a href="#">Nav 3.4.2</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">Nav 3.4.2.1</a></li>
+                      <li><a href="#">Nav 3.4.2.2</a></li>
+                      <li><a href="#">Nav 3.4.2.3</a></li>
+                      <li><a href="#">Nav 3.4.2.4</a></li>
+                      <li><a href="#">Nav 3.4.2.5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Nav 3.4.3</a></li>
+                  <li><a href="#">Nav 3.4.4</a></li>
+                  <li><a href="#">Nav 3.4.5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Nav 3.5</a></li>
             </ul>
-            <div class="box visible">
-                <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.
-            </div>
-            <div class="box">
-                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.
-            </div>
-            <div class="box">
-                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.
-            </div>
+          </li>
+          <li><a href="#">Nav 4</a></li>
+          <li><a href="#">Nav 5</a></li>
+        </ul>
+      </nav>
+      <h3>Carousel</h3>
+        <div class="jcarousel-wrapper">
+            <div data-jcarousel="true" class="jcarousel">
+        <ul>
+          <li><img src="img/img1.jpg" alt=""></li>
+          <li><img src="img/img2.jpg" alt=""></li>
+          <li><img src="img/img3.jpg" alt=""></li>
+          <li><img src="img/img4.jpg" alt=""></li>
+          <li><img src="img/img5.jpg" alt=""></li>
+          <li><img src="img/img6.jpg" alt=""></li>
+        </ul>
+      </div>
+      <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-prev">‹</a>
+      <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-next">›</a>
+
+      <p data-jcarouselpagination="true" class="jcarousel-pagination"><a class="" href="#1">1</a><a class="active" href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
+    </div>
+
+    <h3>jQuery custom selectbox</h3>
+    <div id='demo-default-usage'>
+      <div class="demoTarget">
+        <select id="default-usage-select">
+          <option value="--">Please select your favorite color</option>
+          <option value="01">Red</option>
+          <option value="02">Orange</option>
+          <option value="03">Yellow</option>
+          <option value="04">Green</option>
+          <option value="05">Blue</option>
+          <option value="06">Magenta</option>
+          <option value="07">Violet</option>
+          <option value="08">Ultra-violet</option>
+        </select>
+        <div class="clr"></div>
+      </div>
+      <h3>jQuery нестандартный чекбокс</h3>
+      </div>
+      <div class="clr check">
+        <div><label for="ch1">label 1</label><input type="checkbox" class="niceCheck" id="ch1" tabindex="1" /> </div>
+        <div><label for="ch2">label 2</label><input type="checkbox" class="niceCheck" checked="checked" id="ch2" tabindex="2" value="2" /></div>
+        <div><label for="ch3">label 3</label><input type="checkbox" class="niceCheck" id="ch3" checked="checked" disabled="disabled" /></div>
+      </div>
+
+
+      <h3>CSS нестандартный чекбокс</h3>
+      <section title=".slideThree">
+          <!-- .slideThree -->
+          <div class="label">
+            <div>label1</div>
+            <div>label2</div>
+            <div>label3</div>
           </div>
-    <form>
-  <fieldset>
-    <div class="help">
-      <label for="firstname">Firstname</label>
-      <input id="firstname" name="firstname" title="Please provide your firstname.">
-    </div>
-    <div class="help">
-      <label for="lastname">Lastname</label>
-      <input id="lastname" name="lastname" title="Please provide also your lastname.">
-    </div>
-    <div class="help">
-      <label for="address">Address</label>
-      <input id="address" name="address" title="Your home or work address.">
-    </div>
-  </fieldset>
-</form>
 
-</section>
+          <div class="slideThree">
+            <input type="checkbox" value="None" id="slide1" name="check" checked />
+            <label for="slide1"></label>
+          </div>
+          <div class="slideThree">
+            <input type="checkbox" value="None" id="slide2" name="check" />
+            <label for="slide2"></label>
+          </div>
+          <div class="slideThree">
+            <input type="checkbox" value="None" id="slide3" name="check" checked />
+            <label for="slide3"></label>
+          </div>
+          <!-- end .slideThree -->
+      </section>
 
 
-    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+      </div>
+</body>
 </html>

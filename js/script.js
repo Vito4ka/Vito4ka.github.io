@@ -1,48 +1,53 @@
-(function($, undefined){
-    var n;
-    $(".tabs").on("click", "li:not(.active)", function() {
-        n = $(this).parents(".tabs_block"), $(this).tabs(n)
-    }),
-    $.fn.tabs = function(n) {
-        $(this).addClass("active").siblings().removeClass("active"), n.find(".box").eq($(this).index()).show(1, function() {
-            $(this).addClass("open_tab")
-        }).siblings(".box").hide(1, function() {
-            $(this).removeClass("open_tab")
-        })
-    }
-//-----------Second part--------------------------------
-  $('form').after('<button class="bhelp" role="button"><span>Show help</span></button>')
-  $('.bhelp').click(function(){
-  $('.info').css("display", "block")
-})
+(function($) {
+    $(function() {
+
+        $('.content li').mouseenter(
+          function () {
+        	$(this).animate({
+	backgroundColor:"#0CF"
+}, 500 );
+
+        });
+        $('.content li').mouseleave(function() {
+        	$(this).animate({
+	backgroundColor:"#ff6464"
+}, 500 );
+        });
 
 
-  $('input').each(function() {
-    var el = $(this);
-    var title = el.attr('title');
-    if (title && title != '') {
-      el.attr('title', '').after('<div class="info">' + title + '</div>');
-      var el2=$(el.next());
-      var width = el2.width();
-      var height = el2.height();
-      el.hover(
-        function() {
-          var el2=$(el.next());
-            el2
-            .clearQueue()
-            .delay(200)
-            .animate({width: width + 20, height: height + 20}, 200).show(200)
-            .animate({width: width, height: height}, 200);
-        },
-        function() {
-          var el2=$(el.next());
-            el2
-            .animate({width: width + 20, height: height + 20}, 150)
-            .animate({width: 'hide', height: 'hide'}, 150);
-        }
-      ).mouseleave(function() {
-        if (el2.is(':hidden')) el2.clearQueue();
-      });
-    }
-  })
-})(jQuery)
+
+        $('.jcarousel').jcarousel();
+
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '-=1'
+            });
+
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '+=1'
+            });
+
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination();
+        $('select#default-usage-select').selectbox();
+    });
+})(jQuery);
