@@ -1,43 +1,44 @@
-(function($, undefined){
-    var n;
-    $(".tabs").on("click", "li:not(.active)", function() {
-        n = $(this).parents(".tabs_block"), $(this).tabs(n)
-    }),
-    $.fn.tabs = function(n) {
-        $(this).addClass("active").siblings().removeClass("active"), n.find(".box").eq($(this).index()).show(1, function() {
-            $(this).addClass("open_tab")
-        }).siblings(".box").hide(1, function() {
-            $(this).removeClass("open_tab")
-        })
-    }
-//-----------Second part--------------------------------
-  $('input').each(function() {
-    var el = $(this);
-    var title = el.attr('title');
-    if (title && title != '') {
-      el.attr('title', '').after('<div class="info">' + title + '</div>');
-      var el2=$(el.next());
-      var width = el2.width();
-      var height = el2.height();
-      el.hover(
-        function() {
-          var el2=$(el.next());
-            el2
-            .clearQueue()
-            .delay(200)
-            .animate({width: width + 20, height: height + 20}, 200).show(200)
-            .animate({width: width, height: height}, 200);
-        },
-        function() {
-          var el2=$(el.next());
-            el2
-            .animate({width: width + 20, height: height + 20}, 150)
-            .animate({width: 'hide', height: 'hide'}, 150);
-        }
-      ).mouseleave(function() {
-        if (el2.is(':hidden')) el2.clearQueue();
-      });
-    }
-  })
+$(function() {
 
-})(jQuery)
+var html = $('#test').html();
+var data = {};
+data.name='Теплова Виктория Сергеевна';
+data.char1='Достаточно взрослый человек';
+data.target='Хочу учить фронтенд, потому что:';
+data.reson1='Не хочу, чтоб мозги заржавели ';
+data.reson2='Дочке нужен сайт для бизнеса';
+data.reson3='Мне не помешают 3 штуки в месяц';
+data.phone='Мой контактный телефон';
+data.cont='В контакте не шарюсь, можете пойти на сайт';
+data.href='Ресурс в интернете';
+data.myf='Мой фидбек:';
+data.problems='Пока учёба даётся тяжело. Приходится потеть';
+
+var endata = {};
+endata.name='Viktoriia Teplova';
+endata.char1='Not a very young girl';
+endata.target='I want to teach the frontend because:';
+endata.reson1='I do not want brains rusty ';
+endata.reson2='My daughter needed for business website';
+endata.reson3='I do not give up a lot of money';
+endata.phone='My phone number';
+endata.cont='In contact sharyus not, can go to the website';
+endata.href='Resource on the Internet';
+endata.myf='My feedback:';
+endata.problems='While it is given Study hard. I have to sweat';
+
+  $('#en').click(function(){
+    var content = tmpl(html, endata);
+    $('#data').remove();
+    $('.box1').append(content);
+  });
+  $('#ru').click(function(){
+    var content = tmpl(html, data);
+    $('#data').remove();
+    $('.box1').append(content);
+  });
+
+
+var content = tmpl(html, data);
+$('.box1').append(content);
+});
