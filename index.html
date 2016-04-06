@@ -2,137 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>js_09-10 Теплова Виктория</title>
+    <title>js-proj 13-14</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jquery.selectbox.css">
-    <link rel="stylesheet" href="css/checkbox.css">
-    <link rel="stylesheet" href="css/jcarousel.css">
-    <link rel="stylesheet" href="css/nicecheck.css">
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/modal.css">
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel.js"></script>
-    <script src="js/jquery.selectbox-0.6.1.js"></script>
-    <script src="js/nicecheck.js"></script>
-    <script src="js/jquery.color.js"></script>
-    <script src="js/script.js"></script>
-
+     <script src="js/tmpl.js"></script>
+     <script src="js/script.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <h3>Анимированное выпадающее меню</h3>
-      <nav>
-        <ul class="content clearfix">
-          <li><a href="#">Nav 1</a></li>
-          <li><a href="#">Nav 2</a></li>
-          <li class="dropdown">
-            <a href="#">Nav 3</a>
-            <ul style="display: none;" class="sub-menu">
-              <li><a href="#">Nav 3.1</a></li>
-              <li><a href="#">Nav 3.2</a></li>
-              <li><a href="#">Nav 3.3</a></li>
-              <li class="dropdown">
-                <a href="#">Nav 3.4</a>
-                <ul style="display: none;" class="sub-menu">
-                  <li><a href="#">Nav 3.4.1</a></li>
-                  <li class="dropdown">
-                    <a href="#">Nav 3.4.2</a>
-                    <ul class="sub-menu">
-                      <li><a href="#">Nav 3.4.2.1</a></li>
-                      <li><a href="#">Nav 3.4.2.2</a></li>
-                      <li><a href="#">Nav 3.4.2.3</a></li>
-                      <li><a href="#">Nav 3.4.2.4</a></li>
-                      <li><a href="#">Nav 3.4.2.5</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Nav 3.4.3</a></li>
-                  <li><a href="#">Nav 3.4.4</a></li>
-                  <li><a href="#">Nav 3.4.5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Nav 3.5</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Nav 4</a></li>
-          <li><a href="#">Nav 5</a></li>
+    <script type="text/html" id="nameTest">
+      <form>
+        <p><%= name %></p>
+      <ol>
+      </ol>
+      <button class="md-trigger">Проверить мои результаты<button>
+     </form>
+    </script>
+    <script type="text/html" id="question">
+      <li><%= title %>
+        <ul>
         </ul>
-      </nav>
-      <h3>Carousel</h3>
-      <div class="jcarousel-wrapper">
-        <div data-jcarousel="true" class="jcarousel">
-          <ul>
-            <li><img src="img/img1.jpg" alt=""></li>
-            <li><img src="img/img2.jpg" alt=""></li>
-            <li><img src="img/img3.jpg" alt=""></li>
-            <li><img src="img/img4.jpg" alt=""></li>
-            <li><img src="img/img5.jpg" alt=""></li>
-            <li><img src="img/img6.jpg" alt=""></li>
-          </ul>
+      </li>
+    </script>
+    <script type="text/html" id="answer">
+      <li><input type="radio" name="<%= form %>" id="<%= id %>"> <%= text %></li>
+    </script>
+    <div class="md-modal" id="modal_form">
+	    <div class="md-content">
+        <div>
+		      <h3>Результаты тестирования</h3>
+			    <p>Количество правильных ответов - 0</p>
+			    <button class="md-close">Закрыть</button>
         </div>
-        <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-prev">‹</a>
-        <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-next">›</a>
-
-        <p data-jcarouselpagination="true" class="jcarousel-pagination">
-          <a class="" href="#1">1</a>
-          <a class="active" href="#2">2</a>
-          <a href="#3">3</a>
-          <a href="#4">4</a>
-          <a href="#5">5</a>
-          <a href="#6">6</a>
-        </p>
+	    </div>
     </div>
-
-    <h3>jQuery custom selectbox</h3>
-    <div id='demo-default-usage'>
-      <div class="demoTarget">
-        <select id="default-usage-select">
-          <option value="--">Please select your favorite color</option>
-          <option value="01">Red</option>
-          <option value="02">Orange</option>
-          <option value="03">Yellow</option>
-          <option value="04">Green</option>
-          <option value="05">Blue</option>
-          <option value="06">Magenta</option>
-          <option value="07">Violet</option>
-          <option value="08">Ultra-violet</option>
-        </select>
-        <div class="clr"></div>
-      </div>
-    </div>
-
-      <h3>jQuery нестандартный чекбокс</h3>
-      <div class="clr check">
-        <div><label for="ch1">label 1</label><input type="checkbox" class="niceCheck" id="ch1" tabindex="1" /> </div>
-        <div><label for="ch2">label 2</label><input type="checkbox" class="niceCheck" checked="checked" id="ch2" tabindex="2" value="2" /></div>
-        <div><label for="ch3">label 3</label><input type="checkbox" class="niceCheck" id="ch3" checked="checked" disabled="disabled" /></div>
-      </div>
-
-
-      <h3>CSS нестандартный чекбокс</h3>
-      <section title=".slideThree">
-          <!-- .slideThree -->
-          <div class="label">
-            <div>label1</div>
-            <div>label2</div>
-            <div>label3</div>
-          </div>
-
-          <div class="slideThree">
-            <input type="checkbox" value="None" id="slide1" name="check" checked />
-            <label for="slide1"></label>
-          </div>
-          <div class="slideThree">
-            <input type="checkbox" value="None" id="slide2" name="check" />
-            <label for="slide2"></label>
-          </div>
-          <div class="slideThree">
-            <input type="checkbox" value="None" id="slide3" name="check" checked />
-            <label for="slide3"></label>
-          </div>
-          <!-- end .slideThree -->
-      </section>
-
-
-      </div>
+    <div class="md-overlay"></div>
   </body>
 </html>
