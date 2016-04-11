@@ -85,10 +85,14 @@
       position: fixed;
          left: 0; bottom: 0;
          background: #eee;
+         width: 100%;
          color: #aaa;
          font-size: 16px;
-         width: 100%;
            }
+    footer a {
+      color: #aaa;
+  text-decoration: none;
+    }
     </style>
   </head>
   <body>
@@ -112,21 +116,23 @@
     </div>
     <div id='info'></div>
   </div>
-  <footer>&copy;2016 Company Crypton Ltd</footer>
+  <footer>&copy;2016 <a href="" id='link'>Company Crypton Ltd</a></footer>
   <script type="text/javascript">
   var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage).substr(0, 2).toLowerCase();
   language(lang);
   function language(lang){
     var array ={};
-      array.en = ["Username", "Password", 'Login', 'Welcome to IP-QAM Web Management', 'Forgot your password?', 'To reset to the initial state, press the reset button and hold it down for at least 3 seconds. The button is recessed between the connectors. After pressing established IP address 192.168.0.100 , Username - admin, Password-admin</div>'];
-      array.ru = ['Имя пользователя','Пароль', 'Войти', 'Добро пожаловать на страницу управления IP-QAM', 'Забыли пароль?', 'Для сброса настроек в исходное состояние нажмите на кнопку сброса и подержите её нажатой не менее 3 сек. Кнопка находится в углублении между разъёмами. После нажатия установится адрес IP 192.168.0.100, Имя пользователя - admin, Пароль- admin'];
-      array.ua = ["Ім'я користувача",'Пароль','Ввійти', 'Ласкаво просимо до сторінки керування IP-QAM', 'Забули пароль?', "Для скидання налаштувань в початковий стан натисніть на кнопку скидання і потримайте її натиснутою не менше 3 сек. Кнопка знаходиться в поглибленні між роз'ємами. Після натискання встановиться адреса IP 192.168.0.100, Ім'я користувача - admin, Пароль- admin"];
+      array.en = ["Username", "Password", 'Login', 'Welcome to IP-QAM Web Management', 'Forgot your password?', 'http://cryptontv.com', 'To reset to the initial state, press the reset button and hold it down for at least 3 seconds. The button is recessed between the connectors. After pressing established IP address 192.168.0.100 , Username - admin, Password-admin</div>'];
+      array.ru = ['Имя пользователя','Пароль', 'Войти', 'Добро пожаловать на страницу управления IP-QAM', 'Забыли пароль?', 'http://crypton.com.ua', 'Для сброса настроек в исходное состояние нажмите на кнопку сброса и подержите её нажатой не менее 3 сек. Кнопка находится в углублении между разъёмами. После нажатия установится адрес IP 192.168.0.100, Имя пользователя - admin, Пароль- admin'];
+      array.ua = ["Ім'я користувача",'Пароль','Ввійти', 'Ласкаво просимо до сторінки керування IP-QAM', 'Забули пароль?', 'http://crypton.com.ua', "Для скидання налаштувань в початковий стан натисніть на кнопку скидання і потримайте її натиснутою не менше 3 сек. Кнопка знаходиться в поглибленні між роз'ємами. Після натискання встановиться адреса IP 192.168.0.100, Ім'я користувача - admin, Пароль- admin"];
     document.getElementById("welcom").innerHTML = array[lang][3];
     document.getElementsByName('login')[0].placeholder=array[lang][0];
     document.getElementsByName('pass')[0].placeholder=array[lang][1];
     document.getElementsByName('submit')[0].value=array[lang][2];
+    document.getElementById('link').href =array[lang][5];
+    console.log(  document.getElementById('link'));
     document.getElementById('forgot').innerHTML =array[lang][4];
-    document.getElementById("info").innerHTML =array[lang][5];
+    document.getElementById("info").innerHTML =array[lang][6];
     localStorage['lang'] = lang;
     };
 function info() {
