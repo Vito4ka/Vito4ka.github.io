@@ -4,16 +4,12 @@ module.exports = function(grunt) {
     concat: {
       js: {
         src: 'js/*.js',
-        dest: 'js/dist/script.min.js'
-      },
-      scss: {
-        src: 'css/*.scss',
-        dest: 'css/dist/main.scss'
+        dest: 'js/dist/script.js'
       }
     },
     uglify: {
       js: {
-        src: 'js/dist/script.min.js',
+        src: 'js/dist/script.js',
         dest: 'js/dist/script.min.js'
       }
     },
@@ -21,24 +17,23 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'css/dist',
-          src: ['main.scss'],
-          dest: 'css/dist',
+          cwd: 'css',
+          src: 'style.scss',
+          dest: 'css',
           ext: '.css'
         }]
       }
     },
     cssmin: {
       css: {
-        src: 'css/dist/main.css',
-        dest: 'css/dist/main.css'
+        src: 'css/style.css',
+        dest: 'css/style.css'
       }
     },
     watch: {
-      sass: {
-        // We watch and compile sass files as normal but don't live reload here
+      scss: {
         files: ['css/*.scss'],
-        tasks: ['concat', 'sass'],
+        tasks: ['sass'],
       }
     }
   });
